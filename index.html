@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/c9294f895d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#" class="logo">Portfolio.</a>
+      <ul>
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="./CV.pdf" download>Resume</a></li>
+        <!-- <li><a href="#services">Service</a></li>  -->
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="bars-wrapper">
+      <div class="bar" style="--i: 6"></div>
+      <div class="bar" style="--i: 5"></div>
+      <div class="bar" style="--i: 4"></div>
+      <div class="bar" style="--i: 3"></div>
+      <div class="bar" style="--i: 2"></div>
+      <div class="bar" style="--i: 1"></div>
+    </div>
+
+    <section class="main">
+      <div class="main-info">
+        <h1>Mahwish Fatma</h1>
+        <h2>
+          I'm a
+          <span style="--i: 1" data-text="student">student</span>
+        </h2>
+        <p>
+          Passionate Computer Engineering student with a passion to build a
+          green future. <br />
+          I consider myself a responsible and orderly person, looking forward to
+          learning new skills.
+        </p>
+        <div class="btn-wrapper">
+          <button class="btn btn-color-2" onclick="window.open('./CV.pdf')">
+            Download CV
+          </button>
+          <div class="socials">
+            <a
+              href="https://www.linkedin.com/in/mahwish-fatma-06359a287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://github.com/mahwishh19"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://x.com/Mahwish1959?t=xRIEDm-njxNzkNnzkcxmHQ&s=09"
+              ><i class="fab fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="main-img">
+        <div class="img-wrapper">
+          <div class="image">
+            <img
+              src="https://i.pinimg.com/564x/8b/f8/7d/8bf87d37c4df64b2fdf6178ae13a7441.jpg"
+              alt="image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+
+    <section id="about">
+      <div>
+        <div class="main">
+          <div class="row">
+            <div class="about-col-1">
+              <img
+                src="https://i.pinimg.com/564x/8b/f8/7d/8bf87d37c4df64b2fdf6178ae13a7441.jpg"
+                alt="about-img"
+              />
+            </div>
+            <div class="about-col-2">
+              <h1 class="sub-title">About me</h1>
+              <p>
+                As a computer engineering student, I'm excited to dive deep into
+                the world of technology. My goal is to become a skilled
+                developer, with a strong command of various programming
+                languages. I enjoy challenges that help me grow, whether it's
+                analyzing data, writing efficient code, or developing innovative
+                solutions.
+              </p>
+
+              <div class="tab-titles">
+                <p
+                  class="tab-links active-link"
+                  onclick="opentab(event, 'skills')"
+                >
+                  Skills
+                </p>
+                <p class="tab-links" onclick="opentab(event, 'education')">
+                  Education
+                </p>
+                <p class="tab-links" onclick="opentab(event, 'experience')">
+                  Experience
+                </p>
+              </div>
+
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li>
+                    <span>Technologies & Frameworks:</span><br />HTML5, CSS,
+                    Javascript
+                  </li>
+                  <li>
+                    <span>Programming Languages:</span><br />
+                    C++, SQL, C, Java, PHP
+                  </li>
+                  <li><span>Database Systems:</span><br />MySQL</li>
+                  <li><span>Tools:</span><br />VS Code, IntelliJ IDEA</li>
+                </ul>
+              </div>
+
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li>
+                    <span>Diploma in Computer Engineering:</span><br />Jamia
+                    Millia Islamia, New Delhi, 2022 - Present<br />Result:
+                    Awaited
+                  </li>
+                  <li>
+                    <span>High School:</span><br />BN Pulic School, 2020 -
+                    2021<br />Result: 83.8%
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <li>
+                    <span>Volunteer, Hall of Girl' Residence Old:</span
+                    ><br />April 2024, Volunteer in the Annual Function
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Service -->
+    <section></section>
+    <!-- Contact Section -->
+    <section id="contact">
+      <p class="section_text_p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <!-- <img src="./email.png" alt="Email icon" class="icon contact-icon email-icon" /> -->
+          <i class="fa-regular fa-envelope"></i>
+          <p>
+            <a href="mailto:mahwishfatma4661@gmail.com"
+              >mahwishfatma4661@gmail.com</a
+            >
+          </p>
+        </div>
+
+        <div class="contact-info-container">
+          <!-- <img src="./new phone.png" alt="phone icon" class="icon contact-icon" /> -->
+          <i class="fa-solid fa-phone"></i>
+          <p>
+            <a href="tel:9263601185" class="call-button">
+              Call Me: 9263601185
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-info-container">
+          <!-- <img src="./whatsapp-icon-png-1.jpg" alt="WhatsApp" class="icon contact-icon" /> -->
+          <i class="fa-brands fa-whatsapp"></i>
+          <p>
+            <a href="https://wa.me/9263601185" target="_blank"
+              >Chat on WhatsApp</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      // Get all the tab-links and tab-contents
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      // Function to switch between tabs
+      function opentab(event, tabname) {
+        // Remove active-link class from all tab links
+        for (var tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+
+        // Remove active-tab class from all tab contents
+        for (var tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+
+        // Add active class to the clicked tab link and corresponding tab content
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>

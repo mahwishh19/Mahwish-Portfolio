@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,100,200,0,300,0,400");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* background: #1f242d; */
+  background: #222;
+}
+.navbar {
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  animation: contAnim 1.5s linear forwards;
+  animation-delay: 1.2s;
+}
+@keyframes contAnim {
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.logo {
+  font-size: 30px;
+  font-weight: 600;
+}
+ul {
+  display: flex;
+}
+ul li {
+  list-style: none;
+  margin-left: 35px;
+}
+ul li a {
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+ul li:hover a,
+ul li.active a {
+  color: #7cf03d;
+}
+.main {
+  /* height: 100vh; */
+  width: 100%;
+  padding: 100px 9% 0;
+
+  display: flex;
+  align-items: center;
+  /* gap: 50px; */
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  animation: contAnim 1.5s linear forwards;
+  animation-delay: 1.5s;
+  flex: row;
+}
+.main h1 {
+  font-size: 55px;
+}
+.main h2 {
+  font-size: 32px;
+  display: inline-block;
+}
+.main h2 span {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 0.1px #7cf03d;
+  animation: txtAnim 5s linear infinite;
+  animation-delay: calc(-1s * var(--i));
+}
+@keyframes txtAnim {
+  90%,
+  100% {
+    display: none;
+  }
+}
+.main h2 span::before {
+  position: absolute;
+  content: attr(data-text);
+  border-right: 2px solid #7cf03d;
+  color: #7cf03d;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: textBeAnim 4s linear infinite;
+}
+@keyframes textBeAnim {
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+.main p {
+  font-size: 16px;
+  margin: 10px p 25px;
+}
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background: #7cf03d;
+  border: 2px solid #7cf03d;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #7cf03d;
+  color: #1f242d;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn:hover {
+  background: none;
+  color: #7cf03d;
+}
+.socials {
+  margin-left: 20px;
+}
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #7cf03d;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #7cf03d;
+  margin: 0 8px;
+  transition: 0.5s;
+}
+.socials a:hover {
+  background: #7cf03d;
+  color: #1f242d;
+  box-shadow: 0 0 10px #7cf03d;
+}
+.img-wrapper {
+  position: relative;
+  width: 32vw;
+  height: 32vw;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.img-wrapper::before,
+.img-wrapper::after {
+  position: absolute;
+  content: "";
+  width: 500px;
+  height: 500px;
+  background: conic-gradient(transparent, transparent, transparent, #7cf03d);
+  transform: rotate(0deg);
+  animation: imgAnim 10s linear infinite;
+}
+.img-wrapper::after {
+  animation-delay: -5s;
+}
+@keyframes imgAnim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #1f242d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+}
+.image img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 30px;
+  mix-blend-mode: lighten;
+}
+.bars-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: flex;
+}
+.bar {
+  width: 100%;
+  height: 100%;
+  background: #1f242d;
+  transform: translateY(-100%);
+  animation: barAnim 0.5s ease-in-out forwards;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes barAnim {
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* m f */
+
+/* ---------About---------- */
+#about {
+  /* padding: 80px 0; */
+  /* color: #ababab; */
+  background: #1f242d;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1 {
+  flex-basis: 35%;
+}
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+}
+.about-col-2 {
+  flex-basis: 60%;
+}
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: "";
+  height: 3px;
+  background: #7cf03d;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 50%;
+}
+.tab-contents ul {
+  display: block;
+}
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: #7cf03d;
+  font-size: 14px;
+}
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  width: 100%;
+  display: block;
+}
+
+/* Contact */
+.section_text_p1 {
+  text-align: center;
+  color: #fff;
+}
+.title {
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+}
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+  background: #1f242d;
+}
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+.contact-info-container p {
+  font-size: larger;
+}
+.contact-info-container i {
+  text-decoration: none;
+  font-size: 35px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+/* .contact-icon {
+  cursor: default;
+}
+.email-icon {
+  height: 2.5rem;
+} */
